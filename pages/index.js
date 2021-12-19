@@ -3,17 +3,16 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
 import styles from '@/styles/Home.module.css';
+import Hero from '@/components/Hero';
 
 export default function HomePage() {
   return (
     <Layout title='Real Estate | Home'>
-      <Container>
-        <Row>
-          <Col lg={12}>
-            <h2>Hero</h2>
-          </Col>
-        </Row>
-      </Container>
+      <Hero
+        title='Search Your Next Home.'
+        info='Find, buy or sell property located in your local city.'
+      />
+      {/* Search Form */}
     </Layout>
   );
 }
