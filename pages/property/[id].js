@@ -5,6 +5,7 @@ import styles from '@/styles/SingleProperty.module.css';
 import Address from './address';
 import About from './about';
 import Features from './features';
+import AgentInfo from './agent';
 
 export default function SingleProperty() {
   return (
@@ -26,10 +27,11 @@ export default function SingleProperty() {
               <Address />
               <About />
               <Features />
-              {/* amenities */}
             </Col>
 
-            <Col lg={5}>{/*  Agent info here */}</Col>
+            <Col lg={5} className='ps-lg-5'>
+              <AgentInfo />
+            </Col>
           </Row>
         </Container>
       </section>
