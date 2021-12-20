@@ -10,8 +10,10 @@ export default function AddressPage() {
       </div>
 
       <div>
-        <h4>5689 Resot Relly Market, Montreal Canada, HAQC445</h4>
-        <p>
+        <h2 className='fs-6 fw-bold'>
+          5689 Resot Relly Market, Montreal Canada, HAQC445
+        </h2>
+        <p className='text-secondary'>
           <GoLocation /> 778 Country St. Panama City, FL
         </p>
       </div>
