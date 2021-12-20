@@ -31,3 +31,20 @@ h2 {
 .wrapper {
   position: relative;
 }
+
+.card {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: var(--blue-color) !important;
+  border: none !important;
+  text-align: center !important;
+  padding: 10px 15px !important;
+}
+
+.card-footer {
+  padding: 20px !important;
+  background-color: var(--white-color) !important;
+}

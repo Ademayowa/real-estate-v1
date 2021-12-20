@@ -1,0 +1,19 @@
+.textPro {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px !important;
+  color: #a4aecb;
+}
+
+/* Cards */
+.cFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cFooter h6 {
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--green-color);
+}

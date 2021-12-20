@@ -4,6 +4,7 @@ import Property from '@/components/Property';
 import Hero from '@/components/Hero';
 import styles from '@/styles/Home.module.css';
 import Search from './search';
+import RecentProperty from '@/components/RecentProperty';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
           info='Find, buy or sell property located in your local city.'
         />
         <Search />
+        <RecentProperty />
       </div>
     </Layout>
   );
