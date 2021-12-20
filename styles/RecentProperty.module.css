@@ -17,3 +17,8 @@
   font-size: 28px;
   color: var(--green-color);
 }
+
+.rounded {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}

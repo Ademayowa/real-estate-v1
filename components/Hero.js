@@ -5,7 +5,7 @@ export default function HeroPage({ title, info }) {
   return (
     <div className={styles.hero}>
       <h1>{title}</h1>
-      <p>{info}</p>
+      <p className='text-white'>{info}</p>
     </div>
   );
 }

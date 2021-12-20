@@ -18,13 +18,14 @@ export default function RecentProperty() {
           </p>
         </Col>
 
-        <Col lg={4}>
+        <Col md={6} lg={4}>
           <Card className='mb-4'>
             <Image
               src={`/images/property.jpg`}
               width={200}
               height={200}
               objectFit='cover'
+              className={styles.rounded}
             />
             <Card.Body>
               <div className='d-flex'>
@@ -36,8 +37,8 @@ export default function RecentProperty() {
               </Card.Title>
               <Card.Text className={styles.textPro}>
                 <FaBed className='me-1' /> 3 beds
-                <FaBath className='ms-5 me-1' /> 1 Bath
-                <TiArrowMove className='ms-5 me-1' /> 800sqft
+                <FaBath className='ms-4 ms-lg-5 me-1' /> 1 Bath
+                <TiArrowMove className='ms-4 ms-lg-5 me-1' /> 800sqft
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -51,13 +52,14 @@ export default function RecentProperty() {
           </Card>
         </Col>
 
-        <Col lg={4}>
+        <Col md={6} lg={4}>
           <Card className='mb-4'>
             <Image
               src={`/images/property.jpg`}
               width={200}
               height={200}
               objectFit='cover'
+              className={styles.rounded}
             />
             <Card.Body>
               <div className='d-flex'>
@@ -69,8 +71,8 @@ export default function RecentProperty() {
               </Card.Title>
               <Card.Text className={styles.textPro}>
                 <FaBed className='me-1' /> 3 beds
-                <FaBath className='ms-5 me-1' /> 1 Bath
-                <TiArrowMove className='ms-5 me-1' /> 800sqft
+                <FaBath className='ms-4 ms-lg-5 me-1' /> 1 Bath
+                <TiArrowMove className='ms-4 ms-lg-5 me-1' /> 800sqft
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -84,13 +86,14 @@ export default function RecentProperty() {
           </Card>
         </Col>
 
-        <Col lg={4}>
+        <Col md={6} lg={4}>
           <Card className='mb-4'>
             <Image
               src={`/images/property.jpg`}
               width={200}
               height={200}
               objectFit='cover'
+              className={styles.rounded}
             />
             <Card.Body>
               <div className='d-flex'>
@@ -102,8 +105,8 @@ export default function RecentProperty() {
               </Card.Title>
               <Card.Text className={styles.textPro}>
                 <FaBed className='me-1' /> 3 beds
-                <FaBath className='ms-5 me-1' /> 1 Bath
-                <TiArrowMove className='ms-5 me-1' /> 800sqft
+                <FaBath className='ms-4 ms-lg-5 me-1' /> 1 Bath
+                <TiArrowMove className='ms-4 ms-lg-5 me-1' /> 800sqft
               </Card.Text>
             </Card.Body>
             <Card.Footer>
