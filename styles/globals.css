@@ -28,6 +28,11 @@ h2 {
   font-family: var(--font-two);
 }
 
+h2,
+p {
+  color: var(--blue-color);
+}
+
 .wrapper {
   position: relative;
 }
@@ -42,6 +47,16 @@ h2 {
   border: none !important;
   text-align: center !important;
   padding: 10px 15px !important;
+}
+
+.bg-warning {
+  background-color: #ffeee8 !important;
+  color: #ff7822;
+}
+
+.bg-success {
+  background-color: #e9f7f1 !important;
+  color: #5cc89b;
 }
 
 .card-footer {
