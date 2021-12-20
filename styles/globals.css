@@ -5,6 +5,7 @@
   --black-color: #000;
   --green-color: #27ae60;
   --blue-color: #2d3954;
+  --gray-color: #f3f5f8;
   --font-two: 'Lato', sans-serif;
 }
 
@@ -25,4 +26,8 @@ a:hover {
 h1,
 h2 {
   font-family: var(--font-two);
+}
+
+.wrapper {
+  position: relative;
 }

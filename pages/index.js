@@ -1,18 +1,20 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
-import styles from '@/styles/Home.module.css';
 import Hero from '@/components/Hero';
+import styles from '@/styles/Home.module.css';
+import Search from './search';
 
 export default function HomePage() {
   return (
     <Layout title='Real Estate | Home'>
-      <Hero
-        title='Search Your Next Home.'
-        info='Find, buy or sell property located in your local city.'
-      />
-      {/* Search Form */}
+      <div className={styles.wrapper}>
+        <Hero
+          title='Search Your Next Home.'
+          info='Find, buy or sell property located in your local city.'
+        />
+        <Search />
+      </div>
     </Layout>
   );
 }
