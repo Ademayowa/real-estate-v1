@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from '@/styles/SingleProperty.module.css';
 import Address from './address';
 import About from './about';
+import Features from './features';
 
 export default function SingleProperty() {
   return (
@@ -13,7 +14,7 @@ export default function SingleProperty() {
           {/* image: use carousel slider */}
           <Image
             src={`/images/property.jpg`}
-            width={2000}
+            width={1500}
             height={500}
             objectFit='cover'
           />
@@ -24,7 +25,7 @@ export default function SingleProperty() {
             <Col lg={7}>
               <Address />
               <About />
-              {/* features */}
+              <Features />
               {/* amenities */}
             </Col>
 
