@@ -6,7 +6,7 @@ import styles from '@/styles/Home.module.css';
 import Search from './search';
 import RecentProperty from '@/components/RecentProperty';
 
-export default function HomePage() {
+export default function HomePage({ properties }) {
   return (
     <Layout title='Real Estate | Home'>
       <div className={styles.wrapper}>
@@ -21,14 +21,14 @@ export default function HomePage() {
   );
 }
 
-// export async function getStaticProps() {
-//   const propertyForRent = await fetchApi(
-//     `${baseUrl}/properties/list?area=Oxford&category=residential&page_size=6`
-//   );
+export async function getStaticProps() {
+  const properties = await fetchApi(
+    `${baseUrl}/properties/list?area=Oxford&category=residential&page_size=6`
+  );
 
-//   return {
-//     props: {
-//       propertyForRent: propertyForRent.listing,
-//     },
-//   };
-// }
+  return {
+    props: {
+      properties: properties.listing,
+    },
+  };
+}

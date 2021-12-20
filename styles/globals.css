@@ -50,6 +50,10 @@ li {
   border-radius: 10px !important;
 }
 
+.card-body {
+  padding: 20px;
+}
+
 /* Utilities classes */
 .btn-primary {
   background-color: var(--blue-color) !important;
@@ -79,6 +83,6 @@ li {
 }
 
 .card-footer {
-  padding: 20px !important;
+  padding: 15px !important;
   background-color: var(--white-color) !important;
 }

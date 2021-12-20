@@ -1,8 +1,8 @@
 .textPro {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px !important;
+  margin-top: 15px;
+  margin-bottom: 15px !important;
   color: #a4aecb;
 }
 
@@ -14,7 +14,7 @@
 
 .cFooter h6 {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 20px;
   color: var(--green-color);
 }
 

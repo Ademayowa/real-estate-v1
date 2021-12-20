@@ -32,7 +32,7 @@ export default function RecentProperty() {
                 <p className='bg-warning p-2 rounded me-2'>6 Network</p>
                 <p className='bg-success p-2 rounded'>Family</p>
               </div>
-              <Card.Title className='fw-bold mt-2'>
+              <Card.Title className='fw-bold fs-6'>
                 7012 Shine Sehu Street, Liverpool London, LC345AC
               </Card.Title>
               <Card.Text className={styles.textPro}>
@@ -43,9 +43,9 @@ export default function RecentProperty() {
             </Card.Body>
             <Card.Footer>
               <div className={styles.cFooter}>
-                <h6>$98,000</h6>
+                <h6 className='mt-1'>$98,000</h6>
                 <Link href='#'>
-                  <a className='btn btn-primary'>View Details</a>
+                  <a className='btn btn-primary btn-sm'>View Details</a>
                 </Link>
               </div>
             </Card.Footer>
@@ -66,7 +66,7 @@ export default function RecentProperty() {
                 <p className='bg-warning p-2 rounded me-2'>6 Network</p>
                 <p className='bg-success p-2 rounded'>Family</p>
               </div>
-              <Card.Title className='fw-bold mt-2'>
+              <Card.Title className='fw-bold fs-6'>
                 7012 Shine Sehu Street, Liverpool London, LC345AC
               </Card.Title>
               <Card.Text className={styles.textPro}>
@@ -77,9 +77,9 @@ export default function RecentProperty() {
             </Card.Body>
             <Card.Footer>
               <div className={styles.cFooter}>
-                <h6>$12,000</h6>
+                <h6 className='mt-1'>$12,000</h6>
                 <Link href='#'>
-                  <a className='btn btn-primary'>View Details</a>
+                  <a className='btn btn-primary btn-sm'>View Details</a>
                 </Link>
               </div>
             </Card.Footer>
@@ -100,7 +100,7 @@ export default function RecentProperty() {
                 <p className='bg-warning p-2 rounded me-2'>6 Network</p>
                 <p className='bg-success p-2 rounded'>Family</p>
               </div>
-              <Card.Title className='fw-bold mt-2'>
+              <Card.Title className='fw-bold fs-6'>
                 7012 Shine Sehu Street, Liverpool London, LC345AC
               </Card.Title>
               <Card.Text className={styles.textPro}>
@@ -111,9 +111,9 @@ export default function RecentProperty() {
             </Card.Body>
             <Card.Footer>
               <div className={styles.cFooter}>
-                <h6>$7,000</h6>
+                <h6 className='mt-1'>$7,000</h6>
                 <Link href='#'>
-                  <a className='btn btn-primary'>View Details</a>
+                  <a className='btn btn-primary btn-sm'>View Details</a>
                 </Link>
               </div>
             </Card.Footer>
