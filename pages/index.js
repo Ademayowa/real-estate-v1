@@ -1,12 +1,13 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { baseUrl, fetchApi } from '@/utils/fetchApi';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
 import Hero from '@/components/Hero';
-import styles from '@/styles/Home.module.css';
-import Search from './search';
+import Search from './Search';
 import RecentProperty from '@/components/RecentProperty';
+import styles from '@/styles/Home.module.css';
 
-export default function HomePage({ properties }) {
+export default function HomePage({ propertyForRent, propertyForSale }) {
   return (
     <Layout title='Real Estate | Home'>
       <div className={styles.wrapper}>
@@ -14,21 +15,46 @@ export default function HomePage({ properties }) {
           title='Search Your Next Home.'
           info='Find, buy or sell property located in your local city.'
         />
+
         <Search />
-        <RecentProperty />
+        <Container>
+          <h2 className='fw-bold text-center mt-5'>Recent Listed Property</h2>
+          <p className='text-center fs-5 mb-5'>
+            We have recent properties for rent
+          </p>
+          <Row>
+            {propertyForRent.map((property) => (
+              <RecentProperty key={property.id} property={property} />
+            ))}
+          </Row>
+
+          <p className='text-center fs-5 mb-5'>
+            We have recent properties for sale
+          </p>
+          <Row>
+            {propertyForSale.map((property) => (
+              <RecentProperty key={property.id} property={property} />
+            ))}
+          </Row>
+        </Container>
       </div>
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const properties = await fetchApi(
-    `${baseUrl}/properties/list?area=Oxford&category=residential&page_size=6`
+  const propertyForRent = await fetchApi(
+    `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`
+  );
+
+  const propertyForSale = await fetchApi(
+    `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`
   );
 
   return {
     props: {
-      properties: properties.listing,
+      propertyForRent: propertyForRent.hits,
+      propertyForSale: propertyForSale.hits,
     },
   };
 }
