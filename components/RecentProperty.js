@@ -25,8 +25,8 @@ export default function RecentProperty({ property }) {
           <Card className='mb-4'>
             <Image
               src={coverPhoto.url}
-              width={200}
-              height={200}
+              width={240}
+              height={240}
               objectFit='cover'
               className={styles.rounded}
             />
