@@ -16,7 +16,7 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
           info='Find, buy or sell property located in your local city.'
         />
 
-        <Search />
+        {/* <Search /> */}
         <Container>
           <h2 className='fw-bold text-center mt-5'>Recent Listed Property</h2>
           <p className='text-center fs-5 mb-5'>

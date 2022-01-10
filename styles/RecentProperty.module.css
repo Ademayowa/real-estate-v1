@@ -1,3 +1,7 @@
+.recent {
+  cursor: pointer;
+}
+
 .textPro {
   display: flex;
   align-items: center;
