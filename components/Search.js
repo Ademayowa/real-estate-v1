@@ -12,10 +12,10 @@ import styles from '@/styles/Search.module.css';
 export default function SearcPage() {
   return (
     <section className={styles.search}>
-      <Form>
+      <Form className='container pt-5 bg-white pb-5 mt-5'>
         <Row className='mb-2'>
           <Form.Group
-            as={Col}
+            // as={Col}
             controlId='formGridState'
             className={styles.test}
           >
@@ -39,7 +39,7 @@ export default function SearcPage() {
           </Form.Group>
 
           <Form.Group
-            as={Col}
+            // as={Col}
             controlId='formGridState'
             className={styles.test}
           >
@@ -65,7 +65,7 @@ export default function SearcPage() {
           </Form.Group>
 
           <Form.Group
-            as={Col}
+            // as={Col}
             controlId='formGridState'
             className={styles.test}
           >
@@ -77,7 +77,7 @@ export default function SearcPage() {
           </Form.Group>
 
           <Form.Group
-            as={Col}
+            // as={Col}
             controlId='formGridState'
             className={styles.test}
           >
