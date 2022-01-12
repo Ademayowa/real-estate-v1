@@ -40,7 +40,20 @@ export default function SingleProperty({
             {/* <Col lg={4}>
               <SearchFilters />
             </Col> */}
-            <Col lg={7}>
+            <Col lg={7} className='mt-4'>
+              <h2 className='fs-6 fw-bold mb-3'>Features of Property</h2>
+              <Row className='bg-white p-4 px-4 rounded shadow-sm'>
+                {amenities.map((item) =>
+                  item.amenities.map((amenity) => (
+                    <Features key={amenity.text} amenity={amenity.text} />
+                  ))
+                )}
+              </Row>
+
+              <About description={description} />
+            </Col>
+
+            <Col lg={5} className='ps-lg-5'>
               <Address
                 baths={baths}
                 rooms={rooms}
@@ -50,20 +63,6 @@ export default function SingleProperty({
                 purpose={purpose}
                 rentFrequency={rentFrequency}
               />
-
-              <About description={description} />
-
-              <h2 className='fs-6 fw-bold mt-5 mb-3'>Features of Property</h2>
-              <Row className='bg-white p-4 px-4 rounded shadow-sm'>
-                {amenities.map((item) =>
-                  item.amenities.map((amenity) => (
-                    <Features key={amenity.text} amenity={amenity.text} />
-                  ))
-                )}
-              </Row>
-            </Col>
-
-            <Col lg={5} className='ps-lg-5'>
               <AgentInfo />
             </Col>
           </Row>

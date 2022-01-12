@@ -1,5 +1,4 @@
 import { GoLocation } from 'react-icons/go';
-import millify from 'millify';
 
 export default function AddressPage({
   baths,
@@ -10,7 +9,7 @@ export default function AddressPage({
   rentFrequency,
 }) {
   return (
-    <div className='bg-white p-4 mt-5 shadow-sm'>
+    <div className='bg-white pt-4 pb-2 ps-4 mt-5 shadow-sm'>
       <div className='d-flex'>
         <p className='bg-warning rounded p-2 me-2'>
           {price} AED
@@ -19,13 +18,6 @@ export default function AddressPage({
         <p className='bg-success rounded p-2 me-2'>{rooms} Bedroom</p>
         <p className='bg-danger rounded p-2'>{purpose}</p>
       </div>
-
-      {/* <div>
-        <h2 className='fs-6 fw-bold'>test</h2>
-        <p className='text-secondary'>
-          <GoLocation /> 778 Country St. Panama City, FL
-        </p>
-      </div> */}
     </div>
   );
 }

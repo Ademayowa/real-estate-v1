@@ -5,7 +5,7 @@ import styles from '@/styles/Agent.module.css';
 
 export default function AgentInfo() {
   return (
-    <div className='bg-white p-4 mt-4 mt-lg-5 shadow-sm'>
+    <div className='bg-white p-4 mt-4 mt-lg-3 shadow-sm'>
       <h2 className='fs-4 fw-bold text-center'>Contact Agent</h2>
 
       <div className={styles.agent}>
