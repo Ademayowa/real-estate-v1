@@ -19,7 +19,7 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
         <Container>
           <Title
             title='Properties For Rent'
-            info=' We have recent properties for rent'
+            info='We have recent properties for rent'
           />
           <Row>
             {propertyForRent.map((property) => (
@@ -29,7 +29,7 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
 
           <Title
             title='Properties For Sale'
-            info=' We have recent properties for sale'
+            info='We have recent properties for sale'
           />
           <Row>
             {propertyForSale.map((property) => (

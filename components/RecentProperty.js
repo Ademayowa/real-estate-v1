@@ -3,7 +3,6 @@ import Layout from '@/components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaBed, FaBath } from 'react-icons/fa';
-import millify from 'millify';
 import styles from '@/styles/RecentProperty.module.css';
 
 export default function RecentProperty({ property }) {
@@ -50,10 +49,11 @@ export default function RecentProperty({ property }) {
           <Card.Footer>
             <div className={styles.cFooter}>
               <h6 className='mt-1'>
-                {millify(price)} AED/{rentFrequency}
+                AED {price}
+                {rentFrequency && `/${rentFrequency}`}
               </h6>
               <Link href={`/property/${externalID}`}>
-                <a className='btn btn-primary btn-sm'>View Details</a>
+                <a className='btn btn-primary btn-sm'>Details</a>
               </Link>
             </div>
           </Card.Footer>

@@ -48,7 +48,7 @@ export default function SearchFilters() {
   }, [searchTerm]);
 
   return (
-    <Form className='bg-white p-4 rounded pb-5'>
+    <Form className='bg-white p-4 shadow-sm pb-5'>
       <Row>
         {filters.map((filter) => (
           <Col sm={4} md={6} lg={4}>

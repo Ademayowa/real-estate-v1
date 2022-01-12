@@ -14,21 +14,23 @@ export default function SearchPage({ properties }) {
 
   return (
     <Layout>
-      <Container className='pt-5 bg-secondary px-5'>
-        {/* fetch query in the url either: for-rent or for-sale */}
-        <h2>Properties {router.query.purpose}</h2>
-        <SearchFilters />
+      <section className={styles.search}>
+        <Container>
+          {/* fetch query in the url either: for-rent or for-sale */}
+          <h2 className='fs-4 fw-bold'>Properties {router.query.purpose}</h2>
+          <SearchFilters />
 
-        <div className='d-flex flex-wrap px-4 pt-5'>
-          {properties.map((property) => (
-            <RecentProperty property={property} key={property.id} />
-          ))}
-        </div>
-        {/* if search result isn't found */}
-        {properties.length === 0 && (
-          <p className='text-center fs-2'>No result found</p>
-        )}
-      </Container>
+          <Row className='mt-5 mb-3'>
+            {properties.map((property) => (
+              <RecentProperty property={property} key={property.id} />
+            ))}
+          </Row>
+          {/* if search result isn't found */}
+          {properties.length === 0 && (
+            <p className='text-center fs-2'>No result found</p>
+          )}
+        </Container>
+      </section>
     </Layout>
   );
 }

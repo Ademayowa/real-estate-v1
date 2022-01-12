@@ -1,8 +1,7 @@
 .hero {
+  height: 50vh;
   width: 100%;
-  background: #000
-    url('https://cdn.pixabay.com/photo/2016/09/22/11/55/kitchen-1687121__340.jpg')
-    no-repeat center center;
+  background: #000 url('../assets/images/bg.jpg') no-repeat center center;
   background-size: cover;
   color: var(--white-color);
   position: relative;
