@@ -12,8 +12,8 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
     <Layout title='Real Estate | Home'>
       <div className={styles.wrapper}>
         <Hero
-          title='Search Your Next Home.'
-          info='Find, buy or sell property located in your local city.'
+          title='Find Your Dream House'
+          info='Buy or rent properties where ever you want in the US'
         />
 
         {/* <Search /> */}
@@ -53,8 +53,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      propertyForRent: propertyForRent.hits,
-      propertyForSale: propertyForSale.hits,
+      propertyForRent: propertyForRent?.hits,
+      propertyForSale: propertyForSale?.hits,
     },
   };
 }

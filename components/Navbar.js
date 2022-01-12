@@ -22,8 +22,8 @@ export default function Header() {
             <Link href='/'>
               <a className='me-4'>Home</a>
             </Link>
-            <Link href='/properties'>
-              <a className='me-4'>Properties</a>
+            <Link href='/search?purpose=for-rent'>
+              <a className='me-4'>Rent</a>
             </Link>
             <Link href='/search'>
               <a>Search</a>

@@ -7,7 +7,8 @@ import About from './about';
 import Features from './features';
 import AgentInfo from './agent';
 import { baseUrl, fetchApi } from '@/utils/fetchApi';
-import Search from '@/components/Search';
+// import Search from '@/components/Search';
+// import SearchFilters from '@/components/SearchFilters';
 // import DefaultImage from '@/assets/images/';
 
 export default function SingleProperty({
@@ -36,10 +37,10 @@ export default function SingleProperty({
 
         <Container>
           <Row>
-            <Col lg={4}>
-              <Search />
-            </Col>
-            <Col lg={8}>
+            {/* <Col lg={4}>
+              <SearchFilters />
+            </Col> */}
+            <Col lg={7}>
               <Address
                 baths={baths}
                 rooms={rooms}
@@ -62,9 +63,9 @@ export default function SingleProperty({
               </Row>
             </Col>
 
-            {/* <Col lg={4} className='ps-lg-5'>
+            <Col lg={5} className='ps-lg-5'>
               <AgentInfo />
-            </Col> */}
+            </Col>
           </Row>
         </Container>
       </section>
