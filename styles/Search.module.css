@@ -1,7 +1,8 @@
 .grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
-  grid: 2rem;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 
 /* .search {
@@ -25,18 +26,10 @@
   }
 } */
 
-@media (max-width: 565px) {
-  .test {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
-    /* grid-template-columns: repeat(3, 1fr) !important; */
-  }
-
-  /* .search {
+/* .search {
     padding: 20px;
     position: absolute;
     top: 20%;
     right: 10%;
     left: 10%;
   } */
-}

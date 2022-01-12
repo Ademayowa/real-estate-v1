@@ -1,25 +1,11 @@
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Group,
-  Label,
-  Control,
-  Spinner,
-  Button,
-  Text,
-  InputGroup,
-  FormControl,
-} from 'react-bootstrap';
-import Layout from './Layout';
-import { useEffect, useState } from 'react';
+import { Container, Row, Col, Form, Group, Label } from 'react-bootstrap';
 import router, { useRouter } from 'next/router';
-import { MdCancel } from 'react-icons/md';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
+import Layout from './Layout';
 import { filterData, getFilterValues } from '@/utils/filterData';
 import { baseUrl, fetchApi } from '@/utils/fetchApi';
+import styles from '@/styles/Search.module.css';
 
 export default function SearchFilters() {
   const [filters, setFilters] = useState(filterData);
@@ -62,83 +48,31 @@ export default function SearchFilters() {
   }, [searchTerm]);
 
   return (
-    <Form className='bg-white rounded px-5'>
-      <Form.Group>
+    <Form className='bg-white p-4 rounded pb-5'>
+      <Row>
         {filters.map((filter) => (
-          <div key={filter.queryName}>
-            <Form.Label className='mt-2 mb-2'>{filter.placeholder}</Form.Label>
+          <Col sm={4} md={6} lg={4}>
+            <Form.Group key={filter.queryName}>
+              <Form.Label className='mt-2 mb-2 fw-bold'>
+                {filter.placeholder}
+              </Form.Label>
 
-            <Form.Select
-              // placeholder={filter.placeholder}
-              onChange={(e) =>
-                // fetch all filter properties on d UI
-                searchProperties({ [filter.queryName]: e.target.value })
-              }
-            >
-              {filter.items.map((item) => (
-                <option value={item.value} key={item.value}>
-                  {item.name}
-                </option>
-              ))}
-            </Form.Select>
-          </div>
-        ))}
-      </Form.Group>
-
-      {/* <InputGroup className='mb-3'>
-        <InputGroup.Text id='basic-addon1'>@</InputGroup.Text>
-        <FormControl
-          placeholder='Username'
-          aria-label='Username'
-          aria-describedby='basic-addon1'
-        />
-      </InputGroup> */}
-
-      <div>
-        <Button onClick={() => setShowLocations(!showLocations)}>
-          Search Location
-        </Button>
-        {showLocations && (
-          <div>
-            <InputGroup className='mb-3'>
-              <InputGroup.Text id='basic-addon1'>@</InputGroup.Text>
-              <FormControl
-                placeholder='Type Here'
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </InputGroup>
-
-            {searchTerm !== '' && (
-              <MdCancel onClick={() => setSearchTerm('')} />
-            )}
-            {loading && <Spinner />}
-            {showLocations && (
-              <div>
-                {locationData?.map((location) => (
-                  <div
-                    key={location.id}
-                    onClick={() => {
-                      searchProperties({
-                        locationExternalIDs: location.externalID,
-                      });
-                      setShowLocations(false);
-                      setSearchTerm(location.name);
-                    }}
-                  >
-                    <p>{location.name}</p>
-                  </div>
+              <Form.Select
+                onChange={(e) =>
+                  // fetch all filter properties on d UI
+                  searchProperties({ [filter.queryName]: e.target.value })
+                }
+              >
+                {filter.items.map((item) => (
+                  <option value={item.value} key={item.value}>
+                    {item.name}
+                  </option>
                 ))}
-                {!loading && !locationData?.length && (
-                  <div>
-                    <p>Waiting to search!</p>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
+              </Form.Select>
+            </Form.Group>
+          </Col>
+        ))}
+      </Row>
     </Form>
   );
 }
