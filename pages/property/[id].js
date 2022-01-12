@@ -7,9 +7,6 @@ import About from './about';
 import Features from './features';
 import AgentInfo from './agent';
 import { baseUrl, fetchApi } from '@/utils/fetchApi';
-// import Search from '@/components/Search';
-// import SearchFilters from '@/components/SearchFilters';
-// import DefaultImage from '@/assets/images/';
 
 export default function SingleProperty({
   property: {
@@ -21,6 +18,10 @@ export default function SingleProperty({
     rentFrequency,
     description,
     amenities,
+    agency,
+    contactName,
+    verification,
+    phoneNumber,
   },
 }) {
   return (
@@ -37,12 +38,9 @@ export default function SingleProperty({
 
         <Container>
           <Row>
-            {/* <Col lg={4}>
-              <SearchFilters />
-            </Col> */}
             <Col lg={7} className='mt-4'>
-              <h2 className='fs-6 fw-bold mb-3'>Features of Property</h2>
-              <Row className='bg-white p-4 px-4 rounded shadow-sm'>
+              <Row className='mx-auto bg-white shadow-sm mt-4'>
+                <h2 className='fs-6 fw-bold pt-3 pb-3'>Features of Property</h2>
                 {amenities.map((item) =>
                   item.amenities.map((amenity) => (
                     <Features key={amenity.text} amenity={amenity.text} />
@@ -63,7 +61,12 @@ export default function SingleProperty({
                 purpose={purpose}
                 rentFrequency={rentFrequency}
               />
-              <AgentInfo />
+              <AgentInfo
+                agency={agency.name}
+                contactName={contactName}
+                verification={verification}
+                phoneNumber={phoneNumber.mobile}
+              />
             </Col>
           </Row>
         </Container>
