@@ -3,7 +3,6 @@ import { baseUrl, fetchApi } from '@/utils/fetchApi';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
 import Hero from '@/components/Hero';
-import Search from '../components/Search';
 import RecentProperty from '@/components/RecentProperty';
 import styles from '@/styles/Home.module.css';
 
