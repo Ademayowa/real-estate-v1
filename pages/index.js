@@ -5,6 +5,7 @@ import Property from '@/components/Property';
 import Hero from '@/components/Hero';
 import RecentProperty from '@/components/RecentProperty';
 import styles from '@/styles/Home.module.css';
+import Title from '@/components/Title';
 
 export default function HomePage({ propertyForRent, propertyForSale }) {
   return (
@@ -15,21 +16,21 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
           info='Buy or rent properties where ever you want in the US'
         />
 
-        {/* <Search /> */}
         <Container>
-          <h2 className='fw-bold text-center mt-5'>Recent Listed Property</h2>
-          <p className='text-center fs-5 mb-5'>
-            We have recent properties for rent
-          </p>
+          <Title
+            title='Properties For Rent'
+            info=' We have recent properties for rent'
+          />
           <Row>
             {propertyForRent.map((property) => (
               <RecentProperty key={property.id} property={property} />
             ))}
           </Row>
 
-          <p className='text-center fs-5 mb-5'>
-            We have recent properties for sale
-          </p>
+          <Title
+            title='Properties For Sale'
+            info=' We have recent properties for sale'
+          />
           <Row>
             {propertyForSale.map((property) => (
               <RecentProperty key={property.id} property={property} />
