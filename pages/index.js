@@ -13,7 +13,7 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
       <div className={styles.wrapper}>
         <Hero
           title='Find Your Dream House'
-          info='Buy or rent properties where ever you want in the US'
+          info='Buy or rent properties of any type in the UAE.'
         />
 
         <Container>
