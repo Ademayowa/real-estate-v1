@@ -24,10 +24,9 @@ export default function RecentProperty({ property }) {
         <Card className='mb-4'>
           <Image
             src={coverPhoto.url}
-            width={240}
-            height={240}
+            width={200}
+            height={200}
             objectFit='cover'
-            className={styles.rounded}
           />
           <Card.Body>
             <div className='d-flex'>

@@ -22,11 +22,6 @@
   color: var(--green-color);
 }
 
-.rounded {
-  border-top-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
-}
-
 /* Search in pages */
 .bg {
   background-color: #f3f5f8;

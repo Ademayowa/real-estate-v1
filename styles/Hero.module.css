@@ -1,7 +1,8 @@
 .hero {
-  height: 50vh;
+  /* height: 50vh; */
+  padding-bottom: 80px;
   width: 100%;
-  background: #000 url('../assets/images/bg.jpg') no-repeat center center;
+  background: #000 url('/images/property.jpg') no-repeat center center;
   background-size: cover;
   color: var(--white-color);
   position: relative;
