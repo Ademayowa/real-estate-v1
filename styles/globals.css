@@ -13,6 +13,10 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.navbar a {
+  font-family: var(--font-two);
+}
+
 a {
   text-decoration: none;
   color: var(--green-color);
