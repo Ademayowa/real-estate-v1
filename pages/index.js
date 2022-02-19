@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { baseUrl, fetchApi } from '@/utils/fetchApi';
+import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
 import Hero from '@/components/Hero';
@@ -8,6 +9,8 @@ import Title from '@/components/Title';
 import styles from '@/styles/Home.module.css';
 
 export default function HomePage({ propertyForRent, propertyForSale }) {
+  const router = useRouter();
+
   return (
     <Layout title='Real Estate | Home'>
       <div className={styles.wrapper}>
@@ -31,7 +34,12 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
           </Row>
 
           <div className='text-center mt-4 mb-4'>
-            <Button size='lg'>More Properties</Button>
+            <Button
+              onClick={() => router.push('/search?purpose=for-rent')}
+              size='lg'
+            >
+              More Properties
+            </Button>
           </div>
         </Container>
       </div>
