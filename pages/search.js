@@ -20,7 +20,7 @@ export default function SearchPage({ properties }) {
           <h2 className='fs-4 fw-bold'>Properties {router.query.purpose}</h2>
           <SearchFilters />
 
-          <Row className='mt-5 mb-3'>
+          <Row className='mt-5 pb-5'>
             {properties.map((property) => (
               <RecentProperty property={property} key={property.id} />
             ))}

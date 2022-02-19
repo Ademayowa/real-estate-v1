@@ -14,6 +14,10 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+footer {
+  background-color: var(--gray-color);
+}
+
 .navbar a {
   font-family: var(--font-two);
 }

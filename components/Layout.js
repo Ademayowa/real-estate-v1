@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from './Footer';
 import Navbar from './Navbar';
 
 export default function Layout({ title, description, keywords, children }) {
@@ -15,6 +16,7 @@ export default function Layout({ title, description, keywords, children }) {
         <Navbar />
       </header>
       <main>{children}</main>
+      <Footer />
     </>
   );
 }
