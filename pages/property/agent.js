@@ -11,7 +11,7 @@ export default function AgentInfo({
   phoneNumber,
 }) {
   return (
-    <div className='bg-white p-4 mt-4 mt-lg-3 shadow-sm'>
+    <div className='bg-white p-4 mt-4 mt-lg-5 shadow-sm'>
       <h2 className='fs-4 fw-bold text-center mb-3'>
         Contact Agent: {contactName}
       </h2>

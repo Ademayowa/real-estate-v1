@@ -40,7 +40,9 @@ export default function SingleProperty({
           <Row>
             <Col lg={7} className='mt-4'>
               <Row className='mx-auto bg-white shadow-sm mt-4'>
-                <h2 className='fs-6 fw-bold pt-3 pb-3'>Features of Property</h2>
+                <h2 className='fs-6 fw-bold pt-4 pb-4 border-bottom px-4'>
+                  Features of Property
+                </h2>
                 {amenities.map((item) =>
                   item.amenities.map((amenity) => (
                     <Features key={amenity.text} amenity={amenity.text} />
@@ -52,7 +54,7 @@ export default function SingleProperty({
             </Col>
 
             <Col lg={5} className='ps-lg-5'>
-              <Address
+              {/* <Address
                 baths={baths}
                 rooms={rooms}
                 baths={baths}
@@ -60,7 +62,7 @@ export default function SingleProperty({
                 price={price}
                 purpose={purpose}
                 rentFrequency={rentFrequency}
-              />
+              /> */}
               <AgentInfo
                 agency={agency.name}
                 contactName={contactName}
