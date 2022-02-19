@@ -48,6 +48,7 @@ export default function RecentProperty({ property }) {
           <Card.Footer>
             <div className={styles.cFooter}>
               <h6 className='mt-1'>
+                {/* Add comma on price */}
                 AED {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                 {rentFrequency && `/${rentFrequency}`}
               </h6>
