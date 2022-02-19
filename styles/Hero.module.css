@@ -1,6 +1,5 @@
 .hero {
-  /* height: 50vh; */
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
   width: 100%;
   background: #000 url('/images/property.jpg') no-repeat center center;
   background-size: cover;
@@ -9,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* text-align: left; */
 }
 
 .hero::after {
@@ -36,7 +34,7 @@
 
 @media (min-width: 768px) {
   .hero {
-    height: 60vh;
+    padding-bottom: 150px;
   }
 
   .hero h1 {
@@ -47,7 +45,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 30vh !important;
+    padding-bottom: 40px !important;
   }
 
   .hero h1 {
@@ -60,9 +58,3 @@
     font-size: 20px;
   }
 }
-
-/* @media (min-width: 992px) {
-  .hero {
-    height: 60vh;
-  }
-} */

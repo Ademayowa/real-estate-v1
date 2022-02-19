@@ -1,11 +1,11 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { baseUrl, fetchApi } from '@/utils/fetchApi';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
 import Hero from '@/components/Hero';
 import RecentProperty from '@/components/RecentProperty';
-import styles from '@/styles/Home.module.css';
 import Title from '@/components/Title';
+import styles from '@/styles/Home.module.css';
 
 export default function HomePage({ propertyForRent, propertyForSale }) {
   return (
@@ -15,27 +15,24 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
           title='Find Your Dream House'
           info='Buy or rent properties of any type in the UAE.'
         />
-
-        <Container>
+        <Container className={styles.properties}>
           <Title
-            title='Properties For Rent'
-            info='We have recent properties for rent'
+            title='Recent Properties'
+            info='We have properties for rent and sale anywhere in the UAE'
           />
           <Row>
             {propertyForRent.map((property) => (
               <RecentProperty key={property.id} property={property} />
             ))}
-          </Row>
 
-          <Title
-            title='Properties For Sale'
-            info='We have recent properties for sale'
-          />
-          <Row>
             {propertyForSale.map((property) => (
               <RecentProperty key={property.id} property={property} />
             ))}
           </Row>
+
+          <div className='text-center mt-4 mb-4'>
+            <Button size='lg'>More Properties</Button>
+          </div>
         </Container>
       </div>
     </Layout>
@@ -44,11 +41,11 @@ export default function HomePage({ propertyForRent, propertyForSale }) {
 
 export async function getStaticProps() {
   const propertyForRent = await fetchApi(
-    `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`
+    `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=3`
   );
 
   const propertyForSale = await fetchApi(
-    `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`
+    `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=3`
   );
 
   return {

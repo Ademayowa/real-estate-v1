@@ -1,21 +1,16 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { baseUrl, fetchApi } from '@/utils/fetchApi';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import styles from '@/styles/SingleProperty.module.css';
-import Address from './address';
 import About from './about';
 import Features from './features';
 import AgentInfo from './agent';
-import { baseUrl, fetchApi } from '@/utils/fetchApi';
+import styles from '@/styles/SingleProperty.module.css';
 
 export default function SingleProperty({
   property: {
-    area,
-    rooms,
-    baths,
     price,
-    purpose,
-    rentFrequency,
+    rooms,
     description,
     amenities,
     agency,
@@ -39,8 +34,10 @@ export default function SingleProperty({
         <Container>
           <Row>
             <Col lg={7} className='mt-4'>
+              <About description={description} />
+
               <Row className='mx-auto bg-white shadow-sm mt-4'>
-                <h2 className='fs-6 fw-bold pt-4 pb-4 border-bottom px-4'>
+                <h2 className='fs-5 fw-bold pt-4 pb-4 border-bottom px-4'>
                   Features of Property
                 </h2>
                 {amenities.map((item) =>
@@ -49,20 +46,9 @@ export default function SingleProperty({
                   ))
                 )}
               </Row>
-
-              <About description={description} />
             </Col>
 
             <Col lg={5} className='ps-lg-5'>
-              {/* <Address
-                baths={baths}
-                rooms={rooms}
-                baths={baths}
-                area={area}
-                price={price}
-                purpose={purpose}
-                rentFrequency={rentFrequency}
-              /> */}
               <AgentInfo
                 agency={agency.name}
                 contactName={contactName}
